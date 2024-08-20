@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+body {
+    background-color: #111;
+}
+.movieList {
+    margin-top: -150px;
+}
+
+@media (max-width: 1024px) {
+    .movieList {
+        margin-top: -90px;
+    }
+}
+
+@media (max-width: 760px) {
+    .movieList {
+        margin-top: -90px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .movieList {
+        margin-top: -90px;
+    }
+}

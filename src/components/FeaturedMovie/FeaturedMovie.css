@@ -1,0 +1,275 @@
+.featured {
+    height: 100vh;
+    animation: moveBackground 30s ease-in-out infinite, zoomBackground 30s ease-in-out infinite, moveVertical 30s ease-in-out infinite;
+    transition: all ease 0.5s;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes zoomBackground {
+    0% {
+        background-size: 110%;
+    }
+    50% {
+        background-size: 130%;
+    }
+    100% {
+        background-size: 120%;
+    }
+}
+
+@keyframes moveVertical {
+    0%, 100% {
+        background-position-y: 50%;
+    }
+    50% {
+        background-position-y: 55%;
+    }
+}
+
+.featured--vertical {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+    
+}
+
+.featured--horizontal {
+    width: inherit;
+    height: inherit;
+    padding: 70px 0 150px 30px;
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.featured--horizontal.hidden {
+    opacity: 0;
+    transform: translateY(-1px);
+}
+
+.featured--name {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 40%;
+}
+
+.featured--info {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.featured--points,
+.featured--year,
+.featured--seasons {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.featured--points {
+    color: #46d369;
+}
+
+.featured--description {
+    color: #999;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    max-width: 40%;
+    max-height: 100px;
+}
+
+.featured--watch-button,
+.featured--myList-button {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 1;
+    transition: all ease 0.2s;
+    margin-bottom: 20px;
+}
+
+.featured--watch-button:hover,
+.featured--myList-button:hover {
+    opacity: 0.7;
+}
+
+.featured--watch-button {
+    background-color: white;
+    color: black;
+}
+
+.featured--myList-button {
+    background-color: #333;
+    color: white;
+}
+
+.featured--genres {
+    font-size: 18px;
+    color: #999;
+}
+
+.featured--genres span {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.featured--seasons {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+@media (max-width: 1024px) {
+    .featured {
+        height: 90vh;
+        animation: none;
+        transition: none    ;
+    }
+    .featured--horizontal {
+        padding: 70px 0 90px 30px;
+        background: linear-gradient(to right, #111 10%, transparent 90%);
+    }
+    .featured--name {
+        font-size: 60px;
+        max-width: 90%;
+    }
+    .featured--info {
+        font-size: 16px;
+    }
+    .featured--description {
+        font-size: 16px;
+        max-width: 60%;
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+    .featured--watch-button,
+    .featured--myList-button {
+        font-size: 16px;
+        opacity: 1;
+    }
+    .featured--watch-button:hover,
+    .featured--myList-button:hover {
+        opacity: 0.7;
+    }
+
+    .featured--genres {
+        font-size: 16px;
+    }
+    .featured--seasons {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 760px) {
+    .featured {
+        height: 90vh;
+        animation: none;
+        transition: none   
+    }
+
+    .featured--horizontal {
+        padding: 70px 0 90px 30px;
+        background: linear-gradient(to right, #111 10%, transparent 90%);
+    }
+    .featured--name {
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        max-width: 90%;
+        
+    }
+    .featured--info {
+        font-size: 12px;
+
+    }
+    .featured--description {
+        font-size: 12px;
+        max-width: 50%;
+        max-height: 50px;
+        overflow: hidden; /* Esconde o texto que ultrapassa o limite */
+        text-overflow: ellipsis; /* Adiciona reticências no final */
+
+    }
+    .featured--watch-button,
+    .featured--myList-button {
+        font-size: 12px;
+        opacity: 1;
+    }
+    .featured--watch-button:hover,
+    .featured--my-List-button:hover {
+        opacity: 0.7;
+    }
+
+    .featured--genres {
+        font-size: 12px;
+    }
+    .featured--seasons {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .featured {
+        height: 90vh;
+        animation: none;
+        transition: none   
+    }
+    .featured--horizontal {
+        padding: 70px 0 90px 30px;
+        background: linear-gradient(to right, #111 10%, transparent 90%);
+    }
+    .featured--name {
+        font-size: 35px;
+    }
+    .featured--info {
+        font-size: 12px;
+    }
+    .featured--description {
+        font-size: 12px;
+        max-width: 50%;
+        max-height: 50px;
+        overflow: hidden; /* Esconde o texto que ultrapassa o limite */
+        text-overflow: ellipsis; /* Adiciona reticências no final */
+
+    }
+    .featured--watchbutton,
+    .featured--mylistbutton {
+        font-size: 12px;
+        opacity: 1;
+    }
+    .featured--watchbutton:hover,
+    .featured--mylistbutton:hover {
+        opacity: 0.7;
+    }
+
+    .featured--genres {
+        font-size: 12px;
+    }
+    .featured--seasons {
+        font-size: 12px;
+    }
+    
+}
